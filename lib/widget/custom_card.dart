@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'package:like_button/like_button.dart';
 import 'package:store_app/model/prodact_model.dart';
 import 'package:store_app/pages/update_page.dart';
 
@@ -9,6 +10,7 @@ class CustomCard extends StatelessWidget {
     required this.prodact,
     super.key,
   });
+
   ProdactModel prodact;
   @override
   Widget build(BuildContext context) {
@@ -47,13 +49,7 @@ class CustomCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('\$${prodact.price.toString()}'),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            FontAwesomeIcons.solidHeart,
-                            color: Colors.red,
-                          ),
-                        ),
+                        LikeButton(),
                       ],
                     ),
                   ],
